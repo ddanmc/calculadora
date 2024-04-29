@@ -88,6 +88,10 @@ button:active {
     <div>
         <button onclick="calcularRaizCuadrada()">√</button>
     </div>
+
+    <div>
+        <button onclick="calcularPorcentaje()">%</button>
+    </div>
     <div>
         <button onclick="agregarOperador('/')">/</button>
     </div>
@@ -123,7 +127,7 @@ button:active {
             var resultado = eval(display.value);
             display.value = resultado;
         }
-        
+
         function calcularRaizCuadrada() {
         var display = document.getElementById('display');
         var numero = parseFloat(display.value);
@@ -133,6 +137,11 @@ button:active {
         } else {
             display.value = 'Error';
         }
+        
+        function calcularPorcentaje() {
+        var display = document.getElementById('display');
+        display.value = eval(display.value) / 100; // Divide el número en pantalla por 100 para obtener el porcentaje
+    }
     }
     </script>
 </body>
