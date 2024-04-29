@@ -65,6 +65,7 @@ button:active {
         <button onclick="agregarNumero('9')">9</button>
         <button onclick="borrar()">C</button>
     </div>
+    
     <div>
         <button onclick="agregarNumero('4')">4</button>
         <button onclick="agregarNumero('5')">5</button>
@@ -82,6 +83,10 @@ button:active {
         <button onclick="agregarPunto()">.</button>
         <button onclick="calcular()">=</button>
         <button onclick="agregarOperador('')"></button>
+    </div>
+
+    <div>
+        <button onclick="calcularRaizCuadrada()">√</button>
     </div>
     <div>
         <button onclick="agregarOperador('/')">/</button>
@@ -118,6 +123,17 @@ button:active {
             var resultado = eval(display.value);
             display.value = resultado;
         }
+        
+        function calcularRaizCuadrada() {
+        var display = document.getElementById('display');
+        var numero = parseFloat(display.value);
+        if (numero >= 0) {
+            var resultado = Math.sqrt(numero);
+            display.value = resultado;
+        } else {
+            display.value = 'Error';
+        }
+    }
     </script>
 </body>
 </html>
